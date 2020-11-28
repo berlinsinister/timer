@@ -1,39 +1,39 @@
 :root {
     --width: 600px;
     --padding: 20px;
-    --lavender: #9997ef;
-    --pink: #f783bd;
-    --lightpink: #f6c5d5;
-    --grey: #555;
-    --darkblue: #091630;
+    --lavender: #b4aed6; /* #9997ef; */
+    --pink: #fec1bc; /* #f783bd; */
+    --lightpink: #fcf3ed; /* #f6c5d5; */
+    --grey: #555555;
+}
+
+html {
+    min-height: 100%;
 }
 
 body {
-    /* background: linear-gradient(90deg, #53b28a, #389a99, #552394); */
-    background: linear-gradient(90deg, var(--lavender), var(--lightpink), var(--lightpink));
+    background: linear-gradient(20deg, var(--lightpink), var(--pink), var(--lavender));
     font-family: 'Manrope';
-    /* font-family: 'Roboto'; */
 }
 
 #container {
     width: var(--width);
     background-color: white;
-    border-radius: 10px;
+    border-radius: 7px;
     display: flex;
     flex-direction: column;
     margin: 100px auto;
 }
 
 #row-1 {
-    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: var(--padding);
+    position: relative;
 }
 
 #row-2 {
-    /* border: 1px solid green; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -41,7 +41,6 @@ body {
 }
 
 #row-3 {
-    /* border: 1px solid green; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -66,33 +65,42 @@ body {
     align-items: center;
     font-size: 30pt;
     margin: 10px;
-    transition: border .2s;
+    /* transition: border .2s; */
     font-weight: 200;
+    z-index: 1;
+    background-color: white;
+}
+
+#time-left-bg {
+    width: calc(var(--width)/2.88);
+    height: calc(var(--width)/2.88);
+    border-radius: 50%;
+    /* transition: border .2s; */
+    background: linear-gradient(20deg, var(--lightpink), var(--pink), var(--lavender));    
+    position: absolute;
+    top: 73px;
 }
 
 .time-left-release {
-    border: 1px solid var(--lavender);
+    /* border: 1px solid var(--lavender); */
 }
 
 .time-left-press {
-    border: 1px solid var(--lightpink);
+    /* border: 1px solid var(--pink); */
 }
 
 #break, #session {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 1px solid lime; */
 }
 
 #break-details, #session-details {
-    /* border: 1px solid cyan; */
     width: calc(var(--width)/8);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 15pt;
-    /* margin: 10px; */
 }
 
 #break-decrement:hover, #break-increment:hover, #session-decrement:hover, #session-increment:hover {

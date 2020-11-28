@@ -23,7 +23,7 @@ $(document).ready(function () {
     let audio = $('#beep')[0];
 
     timeLeft.html(min + ':' + '00');
-    timeLeft.addClass('time-left-release');
+    // timeLeft.addClass('time-left-release');
     startStop.addClass('release');
     reset.addClass('release');
     timerLabel.html('session');
@@ -82,8 +82,8 @@ $(document).ready(function () {
         launch = !launch;
         let stop = setInterval(() => {
             if (launch === false) {
-                timeLeft.addClass('time-left-release');
-                timeLeft.removeClass('time-left-press');
+                // timeLeft.addClass('time-left-release');
+                // timeLeft.removeClass('time-left-press');
                 startStop.addClass('release');
                 startStop.removeClass('press');
                 clearInterval(stop);
@@ -132,15 +132,15 @@ $(document).ready(function () {
                     }
                 }
 
-                timeLeft.addClass('time-left-press');
-                timeLeft.removeClass('time-left-release');
+                // timeLeft.addClass('time-left-press');
+                // timeLeft.removeClass('time-left-release');
                 startStop.addClass('press');
                 startStop.removeClass('release');
             }
             // reseting while countdown;
             reset.click(function () {
-                timeLeft.addClass('time-left-release');
-                timeLeft.removeClass('time-left-press');
+                // timeLeft.addClass('time-left-release');
+                // timeLeft.removeClass('time-left-press');
                 startStop.addClass('release');
                 startStop.removeClass('press');
 
